@@ -1,0 +1,39 @@
+{
+  "name": "test-automation-suite",
+  "version": "1.0.0",
+  "description": "Playwright test automation suite for ParaBank application",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report",
+    "lint": "eslint tests/**/*.js",
+    "lint:fix": "eslint tests/**/*.js --fix",
+    "install:browsers": "playwright install",
+    "ci": "npm run lint && npm run test"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "automation",
+    "parabank",
+    "e2e"
+  ],
+  "author": "Test Automation Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "eslint": "^8.0.0",
+    "eslint-plugin-playwright": "^0.18.0"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
